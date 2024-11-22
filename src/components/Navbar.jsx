@@ -13,7 +13,6 @@ const Navbar = () => {
   let login = ctx1;
   console.log(ctx);
 
-
   const handleSearchChange = (e) => {
     setSearchInput(e.target.value);
     ctx.setsearchValue(e.target.Value);
@@ -41,7 +40,7 @@ const Navbar = () => {
               ☰
             </button>
             {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 bg-green-400 text-white rounded shadow-lg">
+              <div className="absolute right-0 mt-2 bg-red-400 text-white rounded shadow-lg">
                 <Link
                   to="/register"
                   className="block px-4 py-2 hover:bg-gray-700"
@@ -52,7 +51,11 @@ const Navbar = () => {
                   Login
                 </Link>
 
-                <Link onClick={ctx.logout} to="/" className="block px-4 py-2 hover:bg-gray-700">
+                <Link
+                  onClick={ctx.logout}
+                  to="/"
+                  className="block px-4 py-2 hover:bg-gray-700"
+                >
                   Logout
                 </Link>
               </div>
